@@ -1,3 +1,8 @@
-let answer = -1;
-answer = answer >= 0 ? 0 : answer * -1;
-console.log(answer);
+function solution(n) {
+  var answer = 0;
+
+  for (let i = 1; i < n; i * 10) answer += n % i;
+  console.log(answer);
+}
+
+solution(123);
