@@ -1,19 +1,11 @@
-function solution(arr) {
-  let max1 = Math.max(arr[0], arr[1]);
-  let max2 = Math.min(arr[0], arr[1]);
-
-  for (let i = 2; i < arr.length; i++) {
-    const num = arr[i];
-    if (num > max1) {
-      max2 = max1;
-      max1 = num;
-    } else if (num > max2) {
-      max2 = num;
-    }
-  }
-
-  return max1 * max2;
+function solution(my_string) {
+  return my_string
+    .split("")
+    .filter((a) => a >= 0 && a <= 9)
+    .map(Number);
 }
 
 // 예시 실행
-console.log(solution([1, 2, 3, 4, 5]));
+console.log(solution("hi12392")); // 1
+console.log(solution("p2o4i8gj2")); // 12
+console.log(solution("abcde0")); // 12
