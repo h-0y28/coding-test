@@ -16,8 +16,10 @@ function solution(s) {
 function solution(s) {
   var answer = s.split("");
   if (s.length % 2 === 0) {
+    // join() 안 해도 됨
     return answer[s.length / 2 - 1] + answer[s.length / 2];
   } else {
+    // 소숫점 버리기
     return answer[Math.floor(s.length / 2)];
   }
 }
