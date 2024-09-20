@@ -1,3 +1,5 @@
+// my
+
 function solution(left, right) {
   let sum = 0;
   for (let i = left; i <= right; i++) {
@@ -16,6 +18,17 @@ function check(num) {
   return sum % 2 === 0 ? num : -num;
 }
 
-// 예시 실행
-console.log(solution(13, 17)); // 43
-console.log(solution(24, 27)); // 52
+// another
+// 제곱근이 정수면 약수의 개수가 홀수
+
+function solution(left, right) {
+  var answer = 0;
+  for (let i = left; i <= right; i++) {
+    if (Number.isInteger(Math.sqrt(i))) {
+      answer -= i;
+    } else {
+      answer += i;
+    }
+  }
+  return answer;
+}
