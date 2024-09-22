@@ -1,3 +1,5 @@
+// my
+
 function solution(s) {
   return s
     .split("")
@@ -5,6 +7,8 @@ function solution(s) {
     .join("");
 }
 
-// 예시 실행
-console.log(solution("Zbcdefg")); // 	"gfedcbZ"
-// console.log(solution(24, 27)); // 52
+// another
+
+function solution(s) {
+  return s.split("").sort().reverse().join("");
+}
