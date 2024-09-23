@@ -1,3 +1,6 @@
+// my
+
+// 2진수로 바꾸었을 때 1의 개수
 function countOnes(num) {
   return num
     .toString(2)
@@ -15,6 +18,11 @@ function solution(n) {
   return N;
 }
 
-// 예시 실행
-console.log(solution(78)); // 83
-console.log(solution(15)); // 23
+// another
+// 정규식 사용
+
+function solution(n, a = n + 1) {
+  return n.toString(2).match(/1/g).length == a.toString(2).match(/1/g).length
+    ? a
+    : solution(n, a + 1);
+}
