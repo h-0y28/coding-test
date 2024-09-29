@@ -1,9 +1,15 @@
+// my
+
 function solution(a, b) {
   return a.toString() + b.toString() > b.toString() + a.toString()
     ? Number(a.toString() + b.toString())
     : Number(b.toString() + a.toString());
 }
 
-// 예시 실행
-console.log(solution(9, 91)); // 991
-console.log(solution(89, 8)); // 898
+// another
+// 백터 이용
+// math.max() 이용
+
+function solution(a, b) {
+  return Math.max(Number(`${a}${b}`), Number(`${b}${a}`));
+}
