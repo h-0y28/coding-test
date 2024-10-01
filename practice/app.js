@@ -1,9 +1,10 @@
-function solution(a, b) {
-  return a.toString() + b.toString() > b.toString() + a.toString()
-    ? Number(a.toString() + b.toString())
-    : Number(b.toString() + a.toString());
+function solution(order) {
+  return order
+    .toString()
+    .split("")
+    .filter((a) => Number(a) % 3 === 0).length;
 }
 
 // 예시 실행
-console.log(solution(9, 91)); // 991
-console.log(solution(89, 8)); // 898
+console.log(solution(200)); // 0
+console.log(solution(29423363)); // 2
