@@ -1,3 +1,5 @@
+// my
+
 function solution(number) {
   let answer = 0;
 
@@ -13,8 +15,3 @@ function solution(number) {
 
   return answer;
 }
-
-// 예시 실행
-console.log(solution([-2, 3, 0, 2, -5])); // 2
-console.log(solution([-3, -2, -1, 0, 1, 2, 3])); // 5
-console.log(solution([-1, 1, -1, 1])); // 0
