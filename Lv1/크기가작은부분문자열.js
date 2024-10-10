@@ -1,3 +1,5 @@
+// my
+
 function solution(t, p) {
   let cnt = 0;
   let pNum = parseInt(p);
@@ -14,7 +16,13 @@ function solution(t, p) {
   return cnt;
 }
 
-// 예시 실행
-console.log(solution("3141592", "271")); // 2
-console.log(solution("500220839878", "7")); // 8
-console.log(solution("10203", "15")); // 3
+// another
+
+function solution(t, p) {
+  let count = 0;
+  for (let i = 0; i <= t.length - p.length; i++) {
+    let value = t.slice(i, i + p.length);
+    if (+p >= +value) count++;
+  }
+  return count;
+}
