@@ -1,20 +1,13 @@
-function solution(t, p) {
-  let cnt = 0;
-  let pNum = parseInt(p);
-
-  for (let i = 0; i <= t.length - p.length; i++) {
-    let substring = t.substring(i, i + p.length);
-    let subNum = parseInt(substring);
-
-    if (subNum <= pNum) {
-      cnt++;
+function solution(numbers) {
+  var answer = [];
+  for (let i = 0; i < numbers.length - 1; i++) {
+    for (let j = i + 1; j < numbers.length; j++) {
+      answer.push(numbers[i] + numbers[j]);
     }
   }
-
-  return cnt;
+  return [...new Set(answer)].sort((a, b) => a - b);
 }
 
 // 예시 실행
-console.log(solution("3141592", "271")); // 2
-console.log(solution("500220839878", "7")); // 8
-console.log(solution("10203", "15")); // 3
+console.log(solution([2, 1, 3, 4, 1])); // [2, 3, 4, 5, 6, 7]
+console.log(solution([5, 0, 2, 7])); // [2, 5, 7, 9, 12]
